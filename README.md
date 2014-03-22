@@ -1,7 +1,7 @@
 ropenfisca
 ==========
 
-Just a set of files to use [OpenFisca](openfisca.fr) with [R](http://cran.r-project.org/)
+[OpenFisca](openfisca.fr) for [R](http://cran.r-project.org/) users
 
 ## Files
 * R/main.R load all the packages you need
