@@ -3,5 +3,7 @@ ropenfisca
 
 A set of functions to use [OpenFisca](openfisca.fr) with [R](http://cran.r-project.org/)
 
+## Documentation
+* [All fields in the API](http://api.openfisca.fr/api/1/fields)
 
 
