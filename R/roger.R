@@ -1,7 +1,6 @@
 # Cas ultra simple d'un célibataire salarié
-json  <- readLines("json/roger.json")
+json  <- readLines("json/roger2.json")
 json
-cat(readLines("json/celib01.json"))
 result_celib <- POST(url='http://api.openfisca.fr/api/1/simulate', body =json,
                      add_headers('Content-Type'= 'application/json',
                                  'User-Agent'='OpenFisca-Notebook'))
@@ -12,7 +11,7 @@ out  <- data.frame(response$value$values)
 names(out)  <- response$value$code
 names(out)
 
-pdf("output/roger_irpp.pdf", width = 10, height = 7)
+svg("output/roger_irpp.svg", width = 10, height = 7)
 ggplot(data = out, aes(x = sali, y = -irpp)) + 
   geom_point(color = "#D74A38") + 
   theme_bw() + 
@@ -21,7 +20,7 @@ ggplot(data = out, aes(x = sali, y = -irpp)) +
   labs(title = "Impôt sur le revenu d'un célibataire salarié en 2014")
 dev.off()
 
-pdf("output/roger_revenu_disponible.pdf", width = 10, height = 7)
+svg("output/roger_revenu_disponible.svg", width = 10, height = 7)
 ggplot(data = out, aes(x = sali, y = revdisp)) + 
   geom_point(color = "#D74A38") + 
   theme_bw() + 
