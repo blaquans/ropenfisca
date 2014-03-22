@@ -1,0 +1,25 @@
+{
+"scenarios": [{
+"axes": [{"count": 100, "max": 200000, "name": "sali", "min": 10}], 
+"test_case": {
+"foyers_fiscaux": [{"declarants": ["ind0"]}], 
+"individus": 
+[{
+"id": "ind0",	
+"prenom": "Roger",
+"birth": 1970,
+"cadre": true, 
+"activite": "Actif occupé", 
+"statmarit": "Célibataire"
+}], 
+"familles": [{"parents": ["ind0"]}], 
+"menages": [{"personne_de_reference": "ind0"}]}, 
+"year": 2014}], 
+"decomposition": [
+{"code": "salsuperbrut"}, 
+{"code": "salnet"}, 
+{"code": "sali"}, 
+{"code": "irpp"}, 
+{"code": "revdisp"}
+]
+}

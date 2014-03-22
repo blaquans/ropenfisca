@@ -9,5 +9,6 @@ ropenfisca
 
 ## Documentation
 * [All fields in the API](http://api.openfisca.fr/api/1/fields)
+* [List of variables](http://nbviewer.ipython.org/github/openfisca/openfisca-web-notebook/blob/master/liste-des-variables.ipynb)
 
 

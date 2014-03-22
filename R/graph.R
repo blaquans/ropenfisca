@@ -1,6 +1,7 @@
 names(out)
 
-ggplot(data = out, aes(x = salsuperbrut, y = alleg_cice / salsuperbrut)) + 
+ggplot(data = out, aes(x = sali, y = -irpp)) + 
   geom_point() + 
-  theme_tufte()
+  theme_bw() + 
+  scales()
 

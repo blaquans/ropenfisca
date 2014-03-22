@@ -2,4 +2,6 @@ library("rjson")
 library("jsonlite")
 library("httr")
 library("ggthemes")
-
+library("scales")
+library("stringr")
+french <- function(x) str_trim(format(x, big.mark = " ", decimal.mark = ","))

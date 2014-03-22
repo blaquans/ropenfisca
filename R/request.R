@@ -1,5 +1,6 @@
-json  <- cat(readLines("json/celib01.json"))
-json  <- readLines("json/celib01.json")
+#json  <- readLines("json/celib01.json")
+
+json  <- readLines("json/roger.json")
 json
 cat(readLines("json/celib01.json"))
 result_celib <- POST(url='http://api.openfisca.fr/api/1/simulate', body =json,
@@ -8,7 +9,6 @@ result_celib <- POST(url='http://api.openfisca.fr/api/1/simulate', body =json,
 response  <-  content(result_celib)
 response$error
 
-response$value$values
 out  <- data.frame(response$value$values)
 names(out)  <- response$value$code
 names(out)
