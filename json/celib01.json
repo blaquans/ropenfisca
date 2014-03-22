@@ -1,4 +1,4 @@
-json_celib <- '{
+{
 "scenarios": [{
 "axes": [{"count": 100, "max": 100000, "name": "sali", "min": 10}, 
 {"count": 100, "max": 100000, "name": "choi", "min": 10}], 
@@ -25,16 +25,4 @@ json_celib <- '{
 {"code": "irpp"}, 
 {"code": "revdisp"}
 ]
-}'
-json_celib
-result_celib <- POST(url='http://api.openfisca.fr/api/1/simulate', body =json_celib,
-                     add_headers('Content-Type'= 'application/json',
-                                 'User-Agent'='OpenFisca-Notebook'))
-response  <-  content(result_celib)
-response$error
-
-response$value$values
-out  <- data.frame(response$value$values)
-names(out)  <- response$value$code
-names(out)
-
+}
