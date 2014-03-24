@@ -16,6 +16,7 @@ plot_data = subset(out, select= c("revnet", "psoc", "ppe", "impo"))
 library(reshape)
 plot_data = melt(out, id.vars = c("sali", "revdisp")
 )
+
 svg("output/roger_aera.svg", width = 10, height = 7)
 ggplot(data = plot_data, aes(x = sali, group=variable, fill=variable, y=value)) + 
   geom_area(position='stack') +
@@ -24,6 +25,5 @@ ggplot(data = plot_data, aes(x = sali, group=variable, fill=variable, y=value)) 
   scale_x_continuous(name = "Salaire imposable", label = french, breaks = pretty_breaks(n=10)) + 
   scale_y_continuous(name = "Revenu disponible", label = french, breaks = pretty_breaks(n=10)) + 
   labs(title = "Revenu disponible d'un célibataire salarié en 2014")
-  
 dev.off()
 
