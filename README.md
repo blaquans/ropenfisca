@@ -13,3 +13,6 @@ ropenfisca
 * [List of variables](http://www.openfisca.fr/variables)
 * 
 
+## Manuel
+* Pour écrire la requête, on peut utiliser l'interface utilisateur et exporter la requête au format JSON. Il suffit alors d'envoyer la requête à l'API et de récupérer les résultats pour les analyser dans R. 
+* 
