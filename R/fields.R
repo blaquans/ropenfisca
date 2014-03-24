@@ -11,6 +11,11 @@ columns  <- fields$columns
 names(columns)  <- sub(pattern = "@", replacement = "", x = names(columns))
 # Subset of variables
 columns2  <- subset(columns, select = c(name, label, entity))
+columns2$entity  <- as.character(columns2$entity)
+View(subset(columns2, entity == "ind"))
+View(subset(columns2, entity == "foy"))
+
+table(columns2$entity)
 
 columns$type$sali
 columns$entity$birth
