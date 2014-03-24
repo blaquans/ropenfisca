@@ -29,3 +29,7 @@ ggplot(data = out, aes(x = sali, y = revdisp)) +
   labs(title = "Revenu disponible d'un célibataire salarié en 2014") + 
   geom_abline(intercept = 0, slope = 1)
 dev.off()
+
+
+ggvis(out, props(x = ~sali, y = ~revdisp)) + 
+  layer_line()
